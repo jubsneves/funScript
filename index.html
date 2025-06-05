@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>funScript</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+  <header class="flex items-center justify-center px-20">
+    <div class="flex items-center gap-12">
+      <p class="py-8 font-bold text-white">
+        💡 Tip:
+        <span class="bg-gradient-to-r from-purple-600 to-sky-600 bg-clip-text text-transparent">Between 1 and 20</span>
+      </p>
+      <p class="py-8 font-bold text-white">
+        💯 Score:
+        <span class="score">20</span>
+      </p>
+      <p class="py-8 font-bold text-white">
+        🥇 Highscore:
+        <span class="highscore">0</span>
+      </p>
+      <button
+        class="group relative mb-2 me-2 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 p-0.5 text-sm font-medium text-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300 group-hover:from-purple-600 group-hover:to-blue-500 dark:text-white dark:focus:ring-blue-800">
+        <span
+          class="relative rounded-md bg-white px-5 py-2.5 transition-all duration-75 ease-in group-hover:bg-transparent dark:bg-gray-900 group-hover:dark:bg-transparent">Try
+          again
+        </span>
+      </button>
+    </div>
+  </header>
+  <main class="flex flex-col items-center justify-between px-8">
+    <h1 class="m-8 text-center text-4xl font-extrabold text-white">Guess my number</h1>
+    <img src="question-mark.svg" alt="Question mark image" class="w-40 mb-4">
+
+    <div class="w-60 flex flex-col justify-center">
+      <input type="number"
+        class="text-md block rounded-lg border border-gray-600 bg-gray-50 p-2.5 text-gray-900 bg-gray-700 text-white placeholder-gray-400 focus:border-purple-500 focus:ring-purple-500 mb-4"
+        placeholder="Start guessing" />
+
+      <button type="button"
+        class="rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">🔎 Check
+        number
+      </button>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+
+</html>
