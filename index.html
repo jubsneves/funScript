@@ -5,9 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>funScript</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="main.css" />
+  <link href="output.css" rel="stylesheet">
 </head>
 
 <body>
@@ -36,21 +34,22 @@
   </header>
   <main class="flex flex-col items-center justify-between px-8">
     <h1 class="m-8 text-center text-4xl font-extrabold text-white">Guess my number</h1>
-    <img src="question-mark.svg" alt="Question mark image" class="w-40 mb-4">
-
+    <div class="mb-8">
+      <img src="assets/question-mark.svg" alt="Question mark image" class="w-40 mb-4">
+      <span class="message w-40 flex flex-col text-center text-white">Start guessing...</span>
+    </div>
     <div class="w-60 flex flex-col justify-center">
       <input type="number"
-        class="text-md block rounded-lg border border-gray-600 bg-gray-50 p-2.5 text-gray-900 bg-gray-700 text-white placeholder-gray-400 focus:border-purple-500 focus:ring-purple-500 mb-4"
-        placeholder="Start guessing" />
-
+        class="text-md block rounded-lg border border-gray-600  p-2.5 bg-gray-700 text-white text-center placeholder-gray-400 placeholder:text-center placeholder:text-md focus:border-purple-500 focus:ring-purple-500 mb-4"
+        placeholder="00" />
       <button type="button"
-        class="rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">🔎 Check
+        class="rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-5 py-2.5 text-center text-md font-medium text-white hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">Check
         number
       </button>
     </div>
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  <script src="guessNumber.js"></script>
 </body>
 
 </html>

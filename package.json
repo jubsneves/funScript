@@ -1,0 +1,11 @@
+{
+  "name": "funscript",
+  "version": "1.0.0",
+  "description": "A small project I'm building to learn JavaScript",
+  "scripts": {
+    "dev": "tailwindcss -i ./input.css -o ./output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
