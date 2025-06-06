@@ -1,9 +1,14 @@
 'use strict';
 
+const btnBack = document.querySelector('.back-button');
 let score = 20;
 const cardImg = document.querySelector('.card-image');
 const card = document.querySelector('.card-number');
 let highscore = 0;
+
+btnBack.addEventListener('click', function () {
+    window.location.href = 'index.html';
+});
 
 const displayMesage = function (message) {
     document.querySelector('.message').textContent = message;
