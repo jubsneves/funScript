@@ -13,7 +13,7 @@
     <div class="flex items-center gap-12">
       <p class="py-8 font-bold text-white">
         💡 Tip:
-        <span class="bg-gradient-to-r from-purple-600 to-sky-600 bg-clip-text text-transparent">Between 1 and 20</span>
+        <span class="bg-gradient-to-r from-purple-500 to-sky-500 bg-clip-text text-transparent">Between 1 and 20</span>
       </p>
       <p class="py-8 font-bold text-white">
         💯 Score:
@@ -24,7 +24,7 @@
         <span class="highscore">0</span>
       </p>
       <button
-        class="group relative mb-2 me-2 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 p-0.5 text-sm font-medium text-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300 group-hover:from-purple-600 group-hover:to-blue-500 dark:text-white dark:focus:ring-blue-800">
+        class="try-again group relative mb-2 me-2 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-purple-500 to-sky-500 p-0.5 text-sm font-medium text-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-purple-300 group-hover:from-purple-600 group-hover:to-purple-500 dark:text-white dark:focus:ring-purple-800">
         <span
           class="relative rounded-md bg-white px-5 py-2.5 transition-all duration-75 ease-in group-hover:bg-transparent dark:bg-gray-900 group-hover:dark:bg-transparent">Try
           again
@@ -34,16 +34,20 @@
   </header>
   <main class="flex flex-col items-center justify-between px-8">
     <h1 class="m-8 text-center text-4xl font-extrabold text-white">Guess my number</h1>
-    <div class="mb-8">
-      <img src="assets/question-mark.svg" alt="Question mark image" class="w-40 mb-4">
-      <span class="message w-40 flex flex-col text-center text-white">Start guessing...</span>
+    <div class="mb-8 relative flex flex-col items-center justify-center">
+      <div class="card-number relative w-40 mb-4">
+        <img src="assets/default-guess.svg" alt="Question mark image" class="card-image h-full w-full">
+        <span
+          class="secret-number absolute inset-0 flex items-center justify-center text-6xl font-extrabold text-white">?</span>
+      </div>
+      <span class="message w-full flex flex-col text-center text-white">Start guessing...</span>
     </div>
-    <div class="w-60 flex flex-col justify-center">
+    <div class="w-60 flex flex-col justify-center relative">
       <input type="number"
-        class="text-md block rounded-lg border border-gray-600  p-2.5 bg-gray-700 text-white text-center placeholder-gray-400 placeholder:text-center placeholder:text-md focus:border-purple-500 focus:ring-purple-500 mb-4"
+        class="guess-number text-md block rounded-lg border border-gray-600  p-2.5 bg-gray-700 text-white text-center placeholder-gray-400 placeholder:text-center placeholder:text-md focus:border-purple-500 focus:ring-purple-500 mb-4"
         placeholder="00" />
       <button type="button"
-        class="rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-5 py-2.5 text-center text-md font-medium text-white hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">Check
+        class="check-number rounded-lg bg-gradient-to-br from-purple-600 to-sky-500 px-5 py-2.5 text-center text-md font-medium text-white hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-800">Check
         number
       </button>
     </div>
