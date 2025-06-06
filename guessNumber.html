@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funScript</title>
+    <link href="output.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="flex items-center justify-center px-20">
+        <div class="flex items-center gap-12">
+            <button type="button" class="back-button bg-gray-800 flex flex-row items-center gap-4 px-4 py-2 rounded-lg absolute left-4 text-white cursor-pointer">
+                <svg width="20" height="20" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M37 22C38.1046 22 39 21.1046 39 20C39 18.8954 38.1046 18 37 18V22ZM2.58579 18.5858C1.80474 19.3668 1.80474 20.6332 2.58579 21.4142L15.3137 34.1421C16.0948 34.9232 17.3611 34.9232 18.1421 34.1421C18.9232 33.3611 18.9232 32.0948 18.1421 31.3137L6.82843 20L18.1421 8.68629C18.9232 7.90524 18.9232 6.63891 18.1421 5.85786C17.3611 5.07682 16.0948 5.07682 15.3137 5.85786L2.58579 18.5858ZM37 20V18H4V20V22H37V20Z" fill="white"/>
+                </svg>Back
+            </button>
+            <p class="py-8 font-bold text-white">
+                💡 Tip:
+                <span class="bg-gradient-to-r from-purple-500 to-sky-500 bg-clip-text text-transparent">Between 1 and
+                    20</span>
+            </p>
+            <p class="py-8 font-bold text-white">
+                💯 Score:
+                <span class="score">20</span>
+            </p>
+            <p class="py-8 font-bold text-white">
+                🥇 Highscore:
+                <span class="highscore">0</span>
+            </p>
+            <button
+                class="try-again group relative mb-2 me-2 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-purple-500 to-sky-500 text-white p-0.5 text-sm font-bold hover:text-white cursor-pointer">
+                <span
+                    class="relative rounded-md bg-white px-5 py-2.5 transition-all duration-75 ease-in group-hover:bg-transparent dark:bg-gray-900 group-hover:dark:bg-transparent">Try
+                    again
+                </span>
+            </button>
+        </div>
+    </header>
+    <section class="flex flex-col items-center justify-between px-8">
+        <h1 class="m-8 text-center text-4xl font-extrabold text-white">Guess my number</h1>
+        <div class="mb-8 relative flex flex-col items-center justify-center">
+            <div class="card-number relative w-40 mb-4">
+                <img src="assets/default-guess.svg" alt="Question mark image" class="card-image h-full w-full">
+                <span
+                    class="secret-number absolute inset-0 flex items-center justify-center text-6xl font-extrabold text-white">?</span>
+            </div>
+            <span class="message w-full flex flex-col text-center text-white">Start guessing...</span>
+        </div>
+        <div class="w-60 flex flex-col justify-center relative">
+            <input type="number"
+                class="guess-number text-md block rounded-lg border border-gray-600  p-2.5 bg-gray-700 text-white text-center placeholder-gray-400 placeholder:text-center placeholder:text-md focus:border-purple-500 focus:ring-purple-500 mb-4"
+                placeholder="00" />
+            <button type="button"
+                class="check-number rounded-lg bg-gradient-to-br from-purple-600 to-sky-500 px-5 py-2.5 text-center text-md font-bold text-white hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-800 cursor-pointer">Check
+                number
+            </button>
+        </div>
+    </section>
+
+    <script src="guessNumber.js"></script>
+</body>
+
+</html>
