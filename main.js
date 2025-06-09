@@ -19,12 +19,10 @@ const closeModal = function () {
 }
 
 //close modal by using Esc
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        if (!modalGuessNumber.classList.contains('hidden')) {
-            closeModal();
-        }
-    };
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modalGuessNumber.classList.contains('hidden')) {
+        closeModal();
+    }
 });
 
 btnOpenGuessGame.addEventListener('click', openModal);
