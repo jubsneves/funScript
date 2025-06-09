@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+/* body {
     background-color: rgb(17, 24, 39);
-}
+} */
 
 @keyframes shake-rotate {
     0%   { transform: rotate(0deg); }

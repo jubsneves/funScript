@@ -1,11 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>funScript</title>
+    <link href="output.css" rel="stylesheet">
 </head>
-<body class="bg-slate-400">
-    <h1>HEY! Welcome to Pig Game!</h1>
+
+<body class="bg-gradient-to-r from-pink-600 to-pink-400 box-border">
+    <header>
+        <button type="button"
+            class="back-button bg-gray-800 flex flex-row items-center gap-4 px-4 py-2 rounded-lg absolute left-4 top-4 text-white cursor-pointer">
+            <svg width="20" height="20" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M37 22C38.1046 22 39 21.1046 39 20C39 18.8954 38.1046 18 37 18V22ZM2.58579 18.5858C1.80474 19.3668 1.80474 20.6332 2.58579 21.4142L15.3137 34.1421C16.0948 34.9232 17.3611 34.9232 18.1421 34.1421C18.9232 33.3611 18.9232 32.0948 18.1421 31.3137L6.82843 20L18.1421 8.68629C18.9232 7.90524 18.9232 6.63891 18.1421 5.85786C17.3611 5.07682 16.0948 5.07682 15.3137 5.85786L2.58579 18.5858ZM37 20V18H4V20V22H37V20Z"
+                    fill="white" />
+            </svg>Back
+            </hidden>
+        </button>
+
+        <main class="flex flex-row justify-center items-center box-border m-24 h-full relative">
+            <section
+                class="flex flex-col items-center justify-between bg-pink-200 px-4 py-12 rounded-tl-2xl rounded-bl-2xl w-full">
+                <div class="p-6 mb-16 text-center">
+                    <h1 class="m-8 text-center text-4xl font-bold text-pink-950">PLAYER 1</h1>
+                    <span class="text-6xl text-pink-600">0</span>
+                </div>
+                <div class="flex-col items-center text-center py-6 px-12 bg-pink-400 rounded-2xl">
+                    <p class="text-white pb-2">Current score:</p>
+                    <span class="text-3xl text-pink-100">0</span>
+                </div>
+            </section>
+            <section
+                class="flex flex-col items-center justify-between bg-pink-400 px-4 py-12 rounded-tr-2xl rounded-br-2xl w-full">
+                <div class="p-6 mb-16 text-center">
+                    <h1 class="m-8 text-center text-4xl font-bold text-pink-950 text-opacity-50">PLAYER 2</h1>
+                    <span class="text-6xl text-pink-600 text-opacity-50">0</span>
+                </div>
+                <div class="flex-col items-center text-center py-6 px-12 bg-pink-500 opacity-50 rounded-2xl">
+                    <p class="text-white text-opacity-50 pb-2">Current score:</p>
+                    <span class="text-3xl text-pink-100">0</span>
+                </div>
+            </section>
+        </main>
+
+        <div class="absolute left-1/2 top-32 transform -translate-x-1/2 flex flex-col items-center gap-6">
+            <button
+                class="py-2 px-6 bg-gradient-to-r from-pink-700 to-pink-600 hover:bg-gradient-to-bl cursor-pointer rounded-full text-white font-medium text-base">
+                🔄 New Game
+            </button>
+            <img src="./assets/2.svg" class="w-20 my-16">
+            <button
+                class="py-2 px-6 bg-gradient-to-r from-pink-700 to-pink-600 hover:bg-gradient-to-bl cursor-pointer rounded-full text-white font-medium text-base">
+                🎲 Roll Dice
+            </button>
+            <button
+                class="py-2 px-6 bg-gradient-to-r from-pink-700 to-pink-600 hover:bg-gradient-to-bl cursor-pointer rounded-full text-white font-medium text-base">
+                ✋🏼 Hold
+            </button>
+        </div>
+
+        <script src="pigGame.js"></script>
 </body>
+
 </html>
