@@ -1,8 +1,12 @@
+'use strict';
+
 const btnOpenGuessGame = document.querySelector('.open-modal--guess-number');
+const btnOpenPigGame = document.querySelector('.open-pig-game');
 const modalGuessNumber = document.querySelector('.modal--guess-number');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modal');
 const btnLevelEasy = document.querySelector('.level-easy');
+
 
 const openModal = function () {
     modalGuessNumber.classList.remove('hidden');
@@ -31,4 +35,8 @@ overlay.addEventListener('click', closeModal);
 
 btnLevelEasy.addEventListener('click', function () {
     window.location.href = 'guessNumber.html';
+});
+
+btnOpenPigGame.addEventListener('click', function () {
+    window.location.href = 'pigGame.html';
 });

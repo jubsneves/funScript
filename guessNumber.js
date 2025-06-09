@@ -2,13 +2,13 @@
 
 const checkNumber = document.querySelector('.check-number');
 const guessNumber = document.querySelector('.guess-number');
-const btnBack = document.querySelector('.back-button');
+const backButton = document.querySelector('.back-button');
 let score = 20;
 const cardImg = document.querySelector('.card-image');
 const card = document.querySelector('.card-number');
 let highscore = 0;
 
-btnBack.addEventListener('click', function () {
+backButton.addEventListener('click', function () {
     window.location.href = 'index.html';
 });
 
