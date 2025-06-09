@@ -1,5 +1,7 @@
 'use strict';
 
+const checkNumber = document.querySelector('.check-number');
+const guessNumber = document.querySelector('.guess-number');
 const btnBack = document.querySelector('.back-button');
 let score = 20;
 const cardImg = document.querySelector('.card-image');
@@ -10,15 +12,15 @@ btnBack.addEventListener('click', function () {
     window.location.href = 'index.html';
 });
 
-const displayMesage = function (message) {
-    document.querySelector('.message').textContent = message;
-}
-
 const newSecretNumber = function () {
     return Math.trunc(Math.random() * 20) + 1;
 }
 
 let secretNumber = newSecretNumber();
+
+const displayMesage = function (message) {
+    document.querySelector('.message').textContent = message;
+}
 
 //Try again and reset the game
 const tryAgain = document.querySelector('.try-again').addEventListener('click', function () {
@@ -26,15 +28,18 @@ const tryAgain = document.querySelector('.try-again').addEventListener('click', 
     secretNumber = newSecretNumber();
     displayMesage('Start guessing...');
     document.querySelector('.score').textContent = score;
-    document.querySelector('.guess-number').value = '';
+    guessNumber.value = '';
     document.querySelector('.secret-number').textContent = '?';
     document.querySelector('body').style.backgroundColor = 'rgb(17, 24, 39)';
     cardImg.src = 'assets/default-guess.svg';
 });
+
+
+
 //Check number button
-document.querySelector('.check-number').addEventListener('click', function () {
-    const guess = Number(document.querySelector('.guess-number').value);
-    document.querySelector('.guess-number').value = '';
+const checkGuess = function () {
+    const guess = Number(guessNumber.value);
+    guessNumber.value = '';
 
     //When there is no number
     if (!guess) {
@@ -72,5 +77,12 @@ document.querySelector('.check-number').addEventListener('click', function () {
             displayMesage('Oh no, you lost the game! 😭');
             document.querySelector('.score').textContent = 0;
         }
+    }
+};
+
+checkNumber.addEventListener('click', checkGuess);
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+        checkGuess();
     }
 });
