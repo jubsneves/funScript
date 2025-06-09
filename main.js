@@ -18,6 +18,13 @@ const closeModal = function () {
     overlay.classList.remove('flex');
 }
 
+//close modal by using Esc
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modalGuessNumber.classList.contains('hidden')) {
+        closeModal();
+    }
+});
+
 btnOpenGuessGame.addEventListener('click', openModal);
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
