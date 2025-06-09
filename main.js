@@ -3,15 +3,13 @@ const modalGuessNumber = document.querySelector('.modal--guess-number');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modal');
 const btnLevelEasy = document.querySelector('.level-easy');
-// const btnLevelMedium = document.querySelector('.level-medium');
-// const btnLevelHard = document.querySelector('.level-hard');
 
 const openModal = function () {
     modalGuessNumber.classList.remove('hidden');
     modalGuessNumber.classList.add('flex');
     overlay.classList.remove('hidden');
     overlay.classList.add('flex');
-}
+};
 
 const closeModal = function () {
     modalGuessNumber.classList.add('hidden');
@@ -20,17 +18,9 @@ const closeModal = function () {
     overlay.classList.remove('flex');
 }
 
-btnOpenGuessGame.addEventListener('click', function () {
-    openModal();
-});
-
-btnCloseModal.addEventListener('click', function () {
-    closeModal();
-});
-
-overlay.addEventListener('click', function () {
-    closeModal();
-});
+btnOpenGuessGame.addEventListener('click', openModal);
+btnCloseModal.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
 
 btnLevelEasy.addEventListener('click', function () {
     window.location.href = 'guessNumber.html';
