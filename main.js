@@ -18,17 +18,9 @@ const closeModal = function () {
     overlay.classList.remove('flex');
 }
 
-btnOpenGuessGame.addEventListener('click', function () {
-    openModal();
-});
-
-btnCloseModal.addEventListener('click', function () {
-    closeModal();
-});
-
-overlay.addEventListener('click', function () {
-    closeModal();
-});
+btnOpenGuessGame.addEventListener('click', openModal);
+btnCloseModal.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
 
 btnLevelEasy.addEventListener('click', function () {
     window.location.href = 'guessNumber.html';
