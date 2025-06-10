@@ -22,41 +22,47 @@
 
         <main class="flex flex-row justify-center items-center box-border m-24 h-full relative">
             <section
-                class="flex flex-col items-center justify-between bg-pink-200 px-4 py-12 rounded-tl-2xl rounded-bl-2xl w-full">
+                class="player--0 player--active flex flex-col items-center justify-between px-4 py-12 rounded-tl-2xl rounded-bl-2xl w-full bg-pink-400">
                 <div class="p-6 mb-16 text-center">
-                    <h1 class="m-8 text-center text-4xl font-bold text-pink-950">PLAYER 1</h1>
-                    <span class="text-6xl text-pink-600">0</span>
+                    <h1 id="name--0" class="m-8 text-center text-4xl font-bold text-pink-950 text-opacity-50"><span class="winner hidden">🏆</span>PLAYER 1
+                    </h1>
+                    <span id="score--0" class="text-6xl text-pink-600 text-opacity-50">12</span>
                 </div>
-                <div class="flex-col items-center text-center py-6 px-12 bg-pink-400 rounded-2xl">
-                    <p class="text-white pb-2">Current score:</p>
-                    <span class="text-3xl text-pink-100">0</span>
+                <div
+                    class="score-box flex-col items-center text-center py-6 px-12 bg-pink-500 rounded-2xl bg-opacity-50">
+                    <p class="text-white pb-2 text-opacity-50">Current score:</p>
+                    <span id="current--0" class="text-3xl text-pink-100 text-opacity-50">0</span>
                 </div>
             </section>
             <section
-                class="flex flex-col items-center justify-between bg-pink-400 px-4 py-12 rounded-tr-2xl rounded-br-2xl w-full">
+                class="player--1 flex flex-col items-center justify-between bg-pink-400 px-4 py-12 rounded-tr-2xl rounded-br-2xl w-full">
                 <div class="p-6 mb-16 text-center">
-                    <h1 class="m-8 text-center text-4xl font-bold text-pink-950 text-opacity-50">PLAYER 2</h1>
-                    <span class="text-6xl text-pink-600 text-opacity-50">0</span>
+                    <h1 id="name--1" class="m-8 text-center text-4xl font-bold text-pink-950 text-opacity-50"><span class="winner hidden">🏆</span>PLAYER 2
+                    </h1>
+                    <span id="score--1" class="text-6xl text-pink-600 text-opacity-50">23</span>
                 </div>
-                <div class="flex-col items-center text-center py-6 px-12 bg-pink-500 opacity-50 rounded-2xl">
+                <div
+                    class="score-box flex-col items-center text-center py-6 px-12 bg-pink-500 bg-opacity-50 rounded-2xl">
                     <p class="text-white text-opacity-50 pb-2">Current score:</p>
-                    <span class="text-3xl text-pink-100">0</span>
+                    <span id="current--1" class="text-3xl text-pink-100 text-opacity-50">0</span>
                 </div>
             </section>
         </main>
 
         <div class="absolute left-1/2 top-32 transform -translate-x-1/2 flex flex-col items-center gap-6">
             <button
-                class="py-2 px-6 bg-gradient-to-r from-pink-700 to-pink-600 hover:bg-gradient-to-bl cursor-pointer rounded-full text-white font-medium text-base">
+                class="btn-new-game py-2 px-6 bg-gradient-to-r from-pink-700 to-pink-600 hover:bg-gradient-to-bl cursor-pointer rounded-full text-white font-medium text-base">
                 🔄 New Game
             </button>
-            <img src="./assets/2.svg" class="w-20 my-16">
+            <div class="my-16 h-20">
+                <img src="./assets/dice-2.svg" class="dice w-20">
+            </div>
             <button
-                class="py-2 px-6 bg-gradient-to-r from-pink-700 to-pink-600 hover:bg-gradient-to-bl cursor-pointer rounded-full text-white font-medium text-base">
+                class="btn-roll-dice py-2 px-6 bg-gradient-to-r from-pink-700 to-pink-600 hover:bg-gradient-to-bl cursor-pointer rounded-full text-white font-medium text-base">
                 🎲 Roll Dice
             </button>
             <button
-                class="py-2 px-6 bg-gradient-to-r from-pink-700 to-pink-600 hover:bg-gradient-to-bl cursor-pointer rounded-full text-white font-medium text-base">
+                class="btn-hold py-2 px-6 bg-gradient-to-r from-pink-700 to-pink-600 hover:bg-gradient-to-bl cursor-pointer rounded-full text-white font-medium text-base">
                 ✋🏼 Hold
             </button>
         </div>
